@@ -1,0 +1,173 @@
+/* ===== GENERAL PAGE STYLES ===== */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    background: url("background.jpg") center/cover no-repeat;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 15vh;
+    background-color: #4CAF50;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.headercontent {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.headercontent img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.headercontent p {
+    font-size: 2rem;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* ===== PAGE CONTAINER ===== */
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ===== CARD SECTION ===== */
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* ===== POST CARD ===== */
+.postcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 5px;
+    border: solid rgb(168, 239, 24) 4px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* ===== MESSAGE BOX ===== */
+.messagebox {
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* ===== FORM ===== */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ===== INPUTS AND BUTTONS ===== */
+input, button {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    .postcard {
+        width: 90%;
+        height: auto;
+    }
+
+    .headercontent p {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        width: 200px;
+    }
+}
+.cites {
+    width: 100%;
+    height: 60px;
+    background-color: yellow;
+}
+.citepage {
+    display: flex;
+    justify-content: start;
+    padding-top: 5px;
+}
+.citepage img {
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
+.footer {
+    width: 100%;
+    height: 95px;
+    background-color: rgb(255, 255, 255);
+}
+.footer img {
+    width: 50px;
+    margin-left: 10px;
+}
+.footerpage {
+    display: flex;
+    justify-content: start;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    to {
+        translate: calc(-5 * 6rem);
+    }
+}

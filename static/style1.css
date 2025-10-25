@@ -1,0 +1,174 @@
+/* ===== GENERAL PAGE STYLES ===== */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    background: url("background.jpg") center/cover no-repeat;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 15vh;
+    background-color: #4CAF50;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.headercontent {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.headercontent img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.headercontent p {
+    font-size: 2rem;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+                 'Lucida Grande', 'Lucida Sans Unicode', 
+                 Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* ===== CITES SECTION ===== */
+.cites {
+    width: 100%;
+    height: 60px;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+}
+
+.citepage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+}
+
+.citepage img {
+    width: 50px;
+    height: auto;
+}
+
+/* ===== MAIN PAGE ===== */
+.page {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 50%;
+    height: 65vh;
+    border-radius: 10px;
+    border: 3px solid brown;
+    background-color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.card a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 40%;
+    height: 15vh;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    margin-top: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card a:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    width: 100%;
+    height: 95px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.footerpage {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200%;
+    animation: scroll-footer 15s linear infinite;
+}
+
+.footer img {
+    width: 50px;
+    margin: 0 15px;
+}
+
+/* Smooth scrolling animation for footer images */
+@keyframes scroll-footer {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card a {
+        width: 70%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .headercontent p {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        height: 70px;
+    }
+
+    .footer img {
+        width: 40px;
+    }
+}
